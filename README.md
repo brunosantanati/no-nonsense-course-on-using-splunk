@@ -3,6 +3,10 @@
 ## Links  
 
 [Splunkbase](https://splunkbase.splunk.com/)  
+[What data can I index?](https://docs.splunk.com/Documentation/Splunk/9.1.2/Data/WhatSplunkcanmonitor)  
+[source type](https://docs.splunk.com/Splexicon:Sourcetype)  
+[List of pretrained source types](https://docs.splunk.com/Documentation/Splunk/9.1.2/Data/Listofpretrainedsourcetypes)  
+[Source type configuration](https://docs.splunk.com/Documentation/Splunk/9.1.2/Admin/Propsconf#Sourcetype_configuration)  
 
 ## Installation
 
