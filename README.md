@@ -3,6 +3,9 @@
 ## Installation
 
 ```
+General download page:
+https://www.splunk.com/en_us/download.html
+
 1 - Download Splunk Enterprise here:
 https://www.splunk.com/en_us/download/splunk-enterprise.html?locale=en_us
 
@@ -26,4 +29,18 @@ type q to skip reading and y to accept
 7 - Access http://127.0.0.1:8000 in the browser and use the previously registered username and password
 
 That's it folks! You've got your Splunk up and running!
+```
+
+## Dev License
+```
+1 - Access this link:
+https://dev.splunk.com/enterprise/dev_license/
+
+2 - Click on: "Go to the Splunk Developer Agreement page."
+
+3 - Agree and submit it in order to request the license
+
+4 - Once you have received the license by email, hit http://127.0.0.1:8000 (your local Splunk) and go to Settings > Licensing
+
+5 - Click on "Add license", choose the file received and click on the button "Install"
 ```
