@@ -52,3 +52,8 @@ https://dev.splunk.com/enterprise/dev_license/
 
 5 - Click on "Add license", choose the file received and click on the button "Install"
 ```
+
+## Basic Searching & Syntax
+```
+POST index="splunk_training" action=addtocart uri="/cart*"
+```
