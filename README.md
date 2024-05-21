@@ -31,6 +31,9 @@ sudo mv splunk /opt/
 4 - Start Splunk:
 /opt/splunk/bin/splunk start
 
+Afterwards, in order to stop it:
+/opt/splunk/bin/splunk stop
+
 5 - Accept the license:
 type q to skip reading and y to accept
 
