@@ -7,6 +7,8 @@
 [source type](https://docs.splunk.com/Splexicon:Sourcetype)  
 [List of pretrained source types](https://docs.splunk.com/Documentation/Splunk/9.1.2/Data/Listofpretrainedsourcetypes)  
 [Source type configuration](https://docs.splunk.com/Documentation/Splunk/9.1.2/Admin/Propsconf#Sourcetype_configuration)  
+[stats command overview](https://docs.splunk.com/Documentation/SCS/current/SearchReference/StatsCommandOverview)  
+[Quick Reference for SPL2 Stats and Charting Functions](https://docs.splunk.com/Documentation/SCS/current/SearchReference/StatsFunctionsQuickReference)  
 
 ## Installation
 
@@ -56,4 +58,8 @@ https://dev.splunk.com/enterprise/dev_license/
 ## Basic Searching & Syntax
 ```
 POST index="splunk_training" action=addtocart uri="/cart*"
+index="splunk_training"
+index="splunk_training" | stats count by status
+index="splunk_training" | stats avg(bytes)
+index="splunk_training" | stats dc(categoryId)
 ```
