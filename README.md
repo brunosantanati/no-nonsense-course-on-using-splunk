@@ -76,4 +76,11 @@ index="splunk_training" action="purchase" productId=$product$ | timechart count 
 
 Search String / SPL query to be used in Dashboard Dropdown:
 index=splunk_training | dedup productId | fields productId
+
+index="splunk_training" ERROR
+index="splunk_training" /cart/ERROR
+
+CSV Lookups
+| inputlookup http-status
+index="splunk_training" status=* | lookup http-status Code as status OUTPUT Message as status_text | search Message !="OK" | table _raw, status_text, status
 ```
