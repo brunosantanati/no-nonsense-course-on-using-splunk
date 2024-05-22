@@ -70,7 +70,7 @@ index="splunk_training" | timechart span=1h avg(bytes) by source
 index="splunk_training" action="purchase" | stats count by productId
 index="splunk_training" action="purchase" productId=* | timechart count by productId limit=20
 
-How to use variables in the Dashboard (surround variable name with dollar signs):
+How to use variable in Dashboard (surround the variable name with dollar signs):
 index="splunk_training" action="purchase" productId=$product$ | stats count by productId
 index="splunk_training" action="purchase" productId=$product$ | timechart count by productId limit=20
 ```
