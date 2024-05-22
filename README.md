@@ -73,4 +73,7 @@ index="splunk_training" action="purchase" productId=* | timechart count by produ
 How to use variables in Dashboard (surround the variable name with dollar signs):
 index="splunk_training" action="purchase" productId=$product$ | stats count by productId
 index="splunk_training" action="purchase" productId=$product$ | timechart count by productId limit=20
+
+Search String / SPL query to be used in Dashboard Dropdown:
+index=splunk_training | dedup productId | fields productId
 ```

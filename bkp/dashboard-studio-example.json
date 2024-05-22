@@ -1,0 +1,185 @@
+{
+    "dataSources": {
+        "ds_jI447IsP": {
+            "type": "ds.search",
+            "options": {
+                "query": "index=\"splunk_training\" action=\"purchase\" productId=$product$ | stats count by productId",
+                "queryParameters": {
+                    "earliest": "0"
+                }
+            },
+            "name": "Products - Pie chart search"
+        },
+        "ds_TpZ81n1N": {
+            "type": "ds.search",
+            "options": {
+                "query": "index=splunk_training | dedup productId | fields productId",
+                "queryParameters": {
+                    "earliest": "0",
+                    "latest": ""
+                }
+            },
+            "name": "Search_1"
+        }
+    },
+    "visualizations": {
+        "viz_TjBNBAZe": {
+            "type": "splunk.pie",
+            "options": {
+                "collapseThreshold": 0.01
+            },
+            "dataSources": {
+                "primary": "ds_jI447IsP"
+            },
+            "title": "Products"
+        },
+        "viz_TmMoZm6C": {
+            "type": "splunk.image",
+            "options": {
+                "preserveAspectRatio": true,
+                "src": "splunk-enterprise-kvstore://664e31e75848467bfb0404d2"
+            }
+        },
+        "viz_b9ec8NQh": {
+            "type": "splunk.markdown",
+            "options": {
+                "markdown": "MY DASHBOARD",
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "customFontSize": 66
+            }
+        },
+        "viz_tyWCO438": {
+            "type": "splunk.singlevalueicon",
+            "options": {
+                "showValue": false,
+                "icon": "splunk-enterprise-kvstore://icon-datacenters__440605f5-471f-4bba-ab7d-80e274222c77.svg"
+            }
+        }
+    },
+    "inputs": {
+        "input_global_trp": {
+            "type": "input.timerange",
+            "options": {
+                "token": "global_time",
+                "defaultValue": "0,"
+            },
+            "title": "Global Time Range"
+        },
+        "input_NtSXYvpA": {
+            "options": {
+                "items": ">frame(label, value) | prepend(formattedStatics) | objects()",
+                "defaultValue": "*",
+                "token": "product"
+            },
+            "title": "Dropdown Input Title",
+            "type": "input.dropdown",
+            "dataSources": {
+                "primary": "ds_TpZ81n1N"
+            },
+            "context": {
+                "formattedConfig": {
+                    "number": {
+                        "prefix": ""
+                    }
+                },
+                "formattedStatics": ">statics | formatByType(formattedConfig)",
+                "statics": [
+                    [
+                        "All"
+                    ],
+                    [
+                        "*"
+                    ]
+                ],
+                "label": ">primary | seriesByName(\"productId\") | renameSeries(\"label\") | formatByType(formattedConfig)",
+                "value": ">primary | seriesByName(\"productId\") | renameSeries(\"value\") | formatByType(formattedConfig)"
+            }
+        }
+    },
+    "layout": {
+        "type": "absolute",
+        "options": {
+            "width": 1440,
+            "height": 960,
+            "display": "fit-to-width",
+            "backgroundColor": "#0877a6"
+        },
+        "structure": [
+            {
+                "item": "viz_TjBNBAZe",
+                "type": "block",
+                "position": {
+                    "x": 20,
+                    "y": 220,
+                    "w": 470,
+                    "h": 360
+                }
+            },
+            {
+                "item": "viz_TmMoZm6C",
+                "type": "block",
+                "position": {
+                    "x": 1120,
+                    "y": 30,
+                    "w": 300,
+                    "h": 300
+                }
+            },
+            {
+                "item": "viz_b9ec8NQh",
+                "type": "block",
+                "position": {
+                    "x": 30,
+                    "y": 30,
+                    "w": 540,
+                    "h": 80
+                }
+            },
+            {
+                "item": "viz_tyWCO438",
+                "type": "block",
+                "position": {
+                    "x": 550,
+                    "y": 20,
+                    "w": 180,
+                    "h": 120
+                }
+            },
+            {
+                "item": "input_global_trp",
+                "type": "input",
+                "position": {
+                    "x": 60,
+                    "y": 140,
+                    "w": 198,
+                    "h": 82
+                }
+            },
+            {
+                "item": "input_NtSXYvpA",
+                "type": "input",
+                "position": {
+                    "x": 250,
+                    "y": 140,
+                    "w": 198,
+                    "h": 82
+                }
+            }
+        ],
+        "globalInputs": []
+    },
+    "title": "Dashboard Studio Example",
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {
+                        "latest": "$global_time.latest$",
+                        "earliest": "$global_time.earliest$"
+                    }
+                }
+            }
+        }
+    }
+}
