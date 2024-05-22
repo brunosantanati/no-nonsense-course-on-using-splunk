@@ -65,4 +65,6 @@ index="splunk_training"
 index="splunk_training" | stats count by status
 index="splunk_training" | stats avg(bytes)
 index="splunk_training" | stats dc(categoryId)
+index="splunk_training" | timechart span=1h count(itemId) by source
+index="splunk_training" | timechart span=1h avg(bytes) by source
 ```
