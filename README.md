@@ -2,6 +2,9 @@
 
 ## Links  
 
+[Community](https://community.splunk.com/)  
+[Splunk .Conf](https://conf.splunk.com/)  
+[Learning paths for certification](https://www.splunk.com/en_us/training/learning-paths-certifications.html)  
 [Splunkbase](https://splunkbase.splunk.com/)  
 [What data can I index?](https://docs.splunk.com/Documentation/Splunk/9.1.2/Data/WhatSplunkcanmonitor)  
 [source type](https://docs.splunk.com/Splexicon:Sourcetype)  
@@ -9,6 +12,12 @@
 [Source type configuration](https://docs.splunk.com/Documentation/Splunk/9.1.2/Admin/Propsconf#Sourcetype_configuration)  
 [stats command overview](https://docs.splunk.com/Documentation/SCS/current/SearchReference/StatsCommandOverview)  
 [Quick Reference for SPL2 Stats and Charting Functions](https://docs.splunk.com/Documentation/SCS/current/SearchReference/StatsFunctionsQuickReference)  
+[Quick Reference Guide](https://www.splunk.com/en_us/resources/splunk-quick-reference-guide.html?301=/en_us/pdfs/solution-guides/splunk-quick-reference-guide.pdf)  
+[timechart](https://docs.splunk.com/Documentation/Splunk/9.1.2/SearchReference/Timechart)  
+[Create dashboards and panels](https://docs.splunk.com/Documentation/Splunk/9.1.2/SearchTutorial/Createnewdashboard)  
+[What is Splunk Dashboard Studio?](https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/DashStudio/IntroFrame)  
+[Getting started with alerts](https://docs.splunk.com/Documentation/Splunk/9.1.2/Alert/Aboutalerts)  
+[Configure CSV lookups](https://docs.splunk.com/Documentation/Splunk/9.1.2/Knowledge/ConfigureCSVlookups)  
 
 ## Installation
 
@@ -84,3 +93,15 @@ CSV Lookups:
 | inputlookup http-status
 index="splunk_training" status=* | lookup http-status Code as status OUTPUT Message as status_text | search Message !="OK" | table _raw, status_text, status
 ```
+
+## Community Support Slack
+
+For real-time interactions and collaborative problem-solving, the Community Support Slack is an invaluable resource. Connect with the Splunk community globally by heading to splk.it/slack. Engage with fellow Splunk enthusiasts, ask questions, and share insights in this dynamic space.  
+
+## Splunk .Conf
+
+Splunk .Conf is an annual user conference that brings together professionals, experts, and enthusiasts from around the world to explore and celebrate the limitless possibilities of data. Hosted by Splunk, this event serves as a nexus for knowledge-sharing, networking, and unveiling the latest advancements in the Splunk ecosystem.  
+
+## Certifications and Learning Pathways
+
+Splunk certifications offer a structured and comprehensive approach for professionals looking to validate their expertise in using the Splunk platform. These certifications not only enhance your skills but also showcase your proficiency in leveraging Splunk's powerful capabilities for data analytics and security.  
