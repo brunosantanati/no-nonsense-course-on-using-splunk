@@ -96,7 +96,7 @@ index="splunk_training" status=* | lookup http-status Code as status OUTPUT Mess
 
 ## Community Support Slack
 
-For real-time interactions and collaborative problem-solving, the Community Support Slack is an invaluable resource. Connect with the Splunk community globally by heading to splk.it/slack. Engage with fellow Splunk enthusiasts, ask questions, and share insights in this dynamic space.  
+For real-time interactions and collaborative problem-solving, the Community Support Slack is an invaluable resource. Connect with the Splunk community globally by heading to [splk.it/slack](https://splk.it/slack). Engage with fellow Splunk enthusiasts, ask questions, and share insights in this dynamic space.  
 
 ## Splunk .Conf
 
